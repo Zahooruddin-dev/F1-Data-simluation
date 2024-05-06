@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <style>
+        /* CSS for the button hover effect */
+ 
+    </style>
+    <title>F1 Race Pace Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <h2>F1 Race Pace Calculator</h2>
+        <label for="laps">Total number of laps:</label>
+        <input type="number" id="laps" placeholder="Enter total number of laps">
+        
+        <label for="team">Select the team:</label>
+        <select id="team">
+            <option value="">Select Team</option>
+            <option value="Red Bull">Red Bull</option>
+            <option value="Mercedes">Mercedes</option>
+            <option value="Ferrari">Ferrari</option>
+            <option value="Aston Martin">Aston Martin</option>
+            <option value="McLaren">McLaren</option>
+            <option value="RB">RB</option>
+            <option value="Stake">Stake</option>
+            <option value="Haas">Haas</option>
+            <option value="Williams">Williams</option>
+            <option value="Alpine">Alpine</option>
+        </select>
+        
+        <div id="driverSelect" style="display:none;">
+            <label for="driver">Select the driver:</label>
+            <select id="driver">
+                <option value="">Select Driver</option>
+            </select>
+        </div>
+        
+        <label for="gap">Gap to leader (seconds):</label>
+        <input type="number" id="gap" placeholder="Enter gap to leader">
+        
+        <label for="benchmark">Select the benchmark team:</label>
+        <select id="benchmark">
+            <option value="">Select Benchmark</option>
+            <option value="Red Bull">Red Bull</option>
+            <option value="Mercedes">Mercedes</option>
+            <option value="Ferrari">Ferrari</option>
+            <option value="Aston Martin">Aston Martin</option>
+            <option value="McLaren">McLaren</option>
+            <option value="RB">RB</option>
+            <option value="Stake">Stake</option>
+            <option value="Haas">Haas</option>
+            <option value="Williams">Williams</option>
+            <option value="Alpine">Alpine</option>
+        </select><br>
+        
+        <!-- Button with cool CSS -->
+        <button class="coolButton" onclick="calculateRacePace()">Calculate Race Pace</button>
+
+        <!-- Advanced option button -->
+        <button id="advancedButton" class="coolButton" onclick="toggleAdvancedOptions()">Advanced Option</button>
+
+        <!-- Advanced options section -->
+        <div id="advancedOptions" class="advancedOptions">
+            <label for="safetyCars">Number of Safety Cars:</label>
+            <input type="number" id="safetyCars" placeholder="Enter number of safety cars">
+        </div>
+
+        <div id="safetyCarDetails" class="advancedOptions">
+            <!-- Safety car details will be dynamically added here based on the number of safety cars -->
+        </div>
+<button class="coolButton" onclick="calculateRacePaceWithSafetyCars()">Calculate Race Pace with Safety Cars</button>
+
+<div id="result" style="display:none;">
+    <h3>Race Pace:</h3>
+    <p id="racePace"></p>
+</div>
+
+    <script src="Javascript/racepace.js"></script>
+    <script src="Javascript/Advance.js"></script>
+    
+    <script src="Javascript/Safety car/SC input.js"></script>
+    <script src="Javascript/Safety car/SC pace.js"></script>
+
+</body>
+</html>
